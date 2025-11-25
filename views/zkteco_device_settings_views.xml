@@ -55,13 +55,14 @@
                     </group>
 
                     <notebook>
-                        <page name="adms_settings" string="Device Adms Config"
-                              invisible="not is_adms">
-                            <group>
-                                <field name="delay"/>
-                                <field name="error_delay"/>
-                                <field name="zkteco_device_real_time"/>
-                                <field name="device_t_interval"/>
+                        <page name="device_settings" string="Device Settings">
+                            <group string="Polling Configuration">
+                                <field name="delay" help="Delay interval (in seconds) for polling the device."/>
+                                <field name="error_delay" help="Delay interval (in seconds) when device errors occur."/>
+                                <field name="device_t_interval" help="Interval between transactions fetched from the device."/>
+                            </group>
+                            <group string="Real-Time Processing">
+                                <field name="zkteco_device_real_time" help="Enable real-time attendance capture from the device."/>
                             </group>
                         </page>
                         <page name="executions" string="Device Operations">
